@@ -25,7 +25,7 @@ async function startZimBotInc() {
     const ZimBotInc = ZimBotIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['SUB DRIPS OFC','Safari','1.0.0'],
+        browser: ['FOLLO _munavir._','Safari','1.0.0'],
         auth: state,
         version
     })
@@ -37,7 +37,7 @@ async function startZimBotInc() {
     if (json.content[0].tag == 'offer') {
     let pa7rick = await ZimBotInc.sendContact(callerId, global.owner)
     ZimBotInc.sendMessage(callerId, { text: `Automatic block system!\nDon't call bot!\nPlease contact the owner to open !`}, { quoted : pa7rick })
-    ZimBotInc.sendMessage(`27634090203@s.whatsapp.net`, {text: `*Report Bot:* Someone Called Bot`})
+    ZimBotInc.sendMessage(`918590822912@s.whatsapp.net`, {text: `*Report Bot:* Someone Called Bot`})
     await sleep(8000)
     await ZimBotInc.updateBlockStatus(callerId, "block")
     }
@@ -127,7 +127,7 @@ ZimBotInc.getName = (jid, withoutContact  = false) => {
         for (let i of kon) {
             list.push({
                 displayName: await ZimBotInc.getName(i + '@s.whatsapp.net'),
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nFN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:ZIM BOT INC 2022\nitem2.EMAIL;type=INTERNET:GitHub: ZIM-BOT\nEND:VCARD`
+                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nFN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:RC BOT INC 2022\nitem2.EMAIL;type=INTERNET: Instagram: _munavir._\nEND:VCARD`
             })
         }
         ZimBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
